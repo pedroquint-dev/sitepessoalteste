@@ -3,45 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
+    <title>Pedro Santos - Desenvolvedor e Estudante</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc; /* Fundo claro e confortável */
+            color: #333; /* Texto escuro para melhor leitura */
+        }
 
+        header {
+            background-color: #1a73e8; /* Azul agradável */
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        section {
+            margin: 2rem auto;
+            max-width: 800px;
+            padding: 1.5rem;
+            background-color: white; /* Fundo limpo */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+
+        section h2 {
+            color: #1a73e8;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        section p, section ul {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+        }
+
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #1a73e8;
+            color: white;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Botão de destaque */
+        .cta-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: #ff6f61; /* Tom vibrante para chamar atenção */
+            color: white;
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff5b4a;
+        }
+    </style>
 </head>
 <body>
-
-
     <header>
-        <h1>Bem-vindo ao Meu Site Pessoal</h1>
-        <p>Descubra um pouco mais sobre mim!</p>
+        <h1>Pedro Santos</h1>
+        <p>Estudante de Desenvolvimento de Sistemas e Apaixonado por Tecnologia</p>
     </header>
-
 
     <section>
         <h2>Sobre Mim</h2>
-        <p>Olá! Meu nome é Pedro, sou estudante de Análise e desenvolvimento de sistemas.</p>
+        <p>Olá! Meu nome é Pedro, e sou estudante de Análise e Desenvolvimento de Sistemas. Tenho paixão por resolver problemas com soluções criativas e aprender constantemente novas tecnologias. Meu foco é me tornar um desenvolvedor full-stack competente, contribuindo para projetos inovadores.</p>
+        <a href="#contato" class="cta-button">Entre em contato</a>
     </section>
-
 
     <section>
         <h2>Meus Hobbies</h2>
         <ul>
-            <li>Treinar</li>
-            <li>Estudar</li>
-            <li>Jogar STALKER</li>
+            <li><strong>Treinar:</strong> Adoro manter uma rotina ativa, praticando musculação e corrida.</li>
+            <li><strong>Estudar:</strong> Estou sempre buscando aprimorar minhas habilidades em programação e tecnologia.</li>
+            <li><strong>Jogos:</strong> Sou fã de jogos imersivos, especialmente STALKER e RPGs.</li>
         </ul>
     </section>
 
-
-    <section>
+    <section id="contato">
         <h2>Contato</h2>
-        <p>Você pode entrar em contato comigo através do e-mail ou das minhas redes sociais:</p>
+        <p>Gostou do meu perfil? Estou disponível para colaborar em projetos, estágios ou trocar ideias sobre tecnologia. Fique à vontade para me contatar por e-mail ou pelas redes sociais abaixo:</p>
         <ul>
-            <li>E-mail: <a href="pedro.santos@aluno.fmpsc.edu.br">pedro.santos@aluno.fmpsc.edu.br</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/pedro-henriquequintdossantos0203/" target="_blank">Meu LinkedIn</a></li>
-            <li>GitHub: <a href="https://github.com/pedroquint-dev" target="_blank">Meu GitHub</a></li>
+            <li><strong>E-mail:</strong> <a href="mailto:pedro.santos@aluno.fmpsc.edu.br">pedro.santos@aluno.fmpsc.edu.br</a></li>
+            <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/pedro-henriquequintdossantos0203/" target="_blank">Meu LinkedIn</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/pedroquint-dev" target="_blank">Meu GitHub</a></li>
         </ul>
     </section>
 
+    <footer>
+        <p>&copy; 2024 Pedro Santos. Todos os direitos reservados.</p>
+    </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const messages = [
+                "Explore meus projetos!",
+                "Conecte-se comigo no LinkedIn!",
+                "Confira meu portfólio no GitHub!"
+            ];
+
+            const subTitle = document.querySelector("header p");
+            let index = 0;
+
+            setInterval(() => {
+                subTitle.textContent = messages[index];
+                index = (index + 1) % messages.length;
+            }, 3000);
+        });
+    </script>
 </body>
 </html>
